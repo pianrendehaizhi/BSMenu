@@ -26,10 +26,6 @@
     [menu presentMenuControlelrOnView:sender];
     menu.menuSelectedCallBack = ^(NSUInteger selectedIndex) {
         NSLog(@"您点击了：%@", array[selectedIndex]);
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"您点击了：%@", array[selectedIndex]] message:nil preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-        [alert addAction:cancel];
-        [self presentViewController:alert animated:YES completion:nil];
     };
 }
 
